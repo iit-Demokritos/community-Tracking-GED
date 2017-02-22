@@ -67,7 +67,7 @@ time-step:2 --> {"windows":[{"communities":[ [[id8,id9],[id9,id10],[id10,id1]], 
 
 
 ## References
-[^fn1]: Piotr Brodka,  Stanislaw Saganowski,  and Przemyslaw Kazienko  (2011), *Tracking group evolution in social networks*, International Conference on Social Informatics, 316--319, Springer
+[1]: Piotr Brodka,  Stanislaw Saganowski,  and Przemyslaw Kazienko  (2011), *Tracking group evolution in social networks*, International Conference on Social Informatics, 316--319, Springer
 
 
 
