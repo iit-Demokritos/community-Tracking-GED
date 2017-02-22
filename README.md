@@ -10,7 +10,7 @@ to another:
 - merge
 - dissolving
 - No_event (when none of the above events holds)
-
+The code is based on the implementation of [^fn1]
 
 
 
@@ -65,13 +65,12 @@ time-step:2 --> {"windows":[{"communities":[ [[id8,id9],[id9,id10],[id10,id1]], 
 - E.g. ```0,40,1,42,continuing``` means that community 40 in window 0 has evolved (corresponds) to community 42 in the next window (window 1) and the associated event with this evolution is continue.
 - Windows are numbered consecutively starting from 0. The same holds for the communities in each window.
 
-## Reference
-@inproceedings{brodka2011tracking,
-  title={Tracking group evolution in social networks},
-  author={Br{\'o}dka, Piotr and Saganowski, Stanis{\l}aw and Kazienko, Przemys{\l}aw},
-  booktitle={International Conference on Social Informatics},
-  pages={316--319},
-  year={2011},
-  organization={Springer}
-}
+
+
+## Licence
+community-tracking - NCSR Demokritos module Copyright 2016 Michail Apostolou
+
+Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at: https://www.apache.org/licenses/LICENSE-2.0
+
+[^fn1]: Piotr Brodka,  Stanislaw Saganowski,  and Przemyslaw Kazienko  (2011), *Tracking group evolution in social networks*, International Conference on Social Informatics, 316--319, Springer
 
