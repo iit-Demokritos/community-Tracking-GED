@@ -34,7 +34,7 @@ class Inclusion():
 
     def find_group_quality(self, intersection, g1):
         intersection_sum = sum([g1.node[node]['centrality'] for node in intersection])
-        g1_sum = sum([d['centrality'] for node,d in g1.nodes_iter(data=True)])
+        g1_sum = sum([d['centrality'] for node,d in g1.nodes(data=True)])
         if (not g1_sum):
 			return 0
         return intersection_sum / g1_sum
@@ -66,7 +66,7 @@ class SocialPositionInclusion(Inclusion):
                 for neighbor in graph.neighbors(node):
                     sp += (1.0 / neighbors) * graph.node[neighbor]['centrality']#*edge_weight
                 d['centrality'] = alpha * sp + (1 - alpha) / num_nodes
-            new_sum = sum([d['centrality'] for n,d in graph.nodes_iter(data=True)])
+            new_sum = sum([d['centrality'] for n,d in graph.nodes(data=True)])
             if 0.00001 > abs(new_sum - previous_sum):
                 #print '[INFO]: Converged in %s iterations...' % _
                 return graph
