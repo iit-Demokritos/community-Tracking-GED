@@ -99,7 +99,7 @@ if __name__=='__main__':
 	graphs = preprocessing.getGraphs(sys.argv[1])
 	tracker = Tracker(graphs)
 	tracker.compare_communities()
-	with open('tmpfiles/ged_results.csv','w')as f:
+	with open('ged_results.csv','w')as f:
 		for hypergraph in tracker.hypergraphs:
 			hypergraph.calculateEvents(f)
 	print "--- %s seconds ---" %(time.time() - start_time)
