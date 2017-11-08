@@ -16,7 +16,7 @@ The code is based on the implementation of [1]
 
 ## File Structure & running
 
-- It contain 6 .py (thon) files
+- It contains 6 .py (thon) files
 config.py , event.py , hypergraph.py, inclusion.py , preprocessing.py , tracker.py
 - To run from terminal:
 python tracker.py <inputfile>.json
