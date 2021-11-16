@@ -20,8 +20,8 @@ def getGraphs(communitiesfile):
 		with open(communitiesfile) as f:
 			data = json.load(f)
 	except:
-		print "Cannot load %s file. Expecting <input>.json file" % communitiesfile
-		print "Exiting with code 1\n"
+		print ("Cannot load %s file. Expecting <input>.json file" % communitiesfile)
+		print ("Exiting with code 1\n")
 		exit(1)
 	graphs = createGraphs(data)
 	return graphs
