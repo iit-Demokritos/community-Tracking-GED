@@ -1,0 +1,20 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+
+
+
+        {
+            "name": "Python: Current File",
+            "type": "python",
+            "request": "launch",
+            "program": "/Users/sophia/Documents/Praktiki/community-Tracking-GED/Tracker.py",
+            "console": "integratedTerminal",
+            "args": [  "/Users/sophia/Documents/Praktiki/community-Tracking-GED/input_example/community_edges.json"]
+
+        }
+    ]
+}
