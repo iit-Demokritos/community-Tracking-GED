@@ -18,8 +18,8 @@ The code is based on the implementation of [1]
 
 - It contains 6 .py (thon) files
 config.py , event.py , hypergraph.py, inclusion.py , preprocessing.py , tracker.py
-- To run from terminal:
-python tracker.py <inputfile>.json
+- To run from terminal: $ python3 Tracker.py input_example/community_edges.json
+(python tracker.py <inputfile>.json)
 - output: a file named 'results.csv', the format is:
 ```window ID, community ID, window ID, community ID, event```
 - In config.py there are 2 parameters Alpha,Beta. These are the thresholds for the event
