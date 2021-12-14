@@ -28,9 +28,9 @@ class Tracker():
 				self.inclusions = {}
 				window_id = 'TF%s -> TF%s' % (index,index+1)
 				Dhypergraph = nx.DiGraph(window=window_id)
-				print 'Initialize inclusions dict start...'
+				print ('Initialize inclusions dict start...')
 				Dhypergraph = self.initialize_inclusions(index,Dhypergraph)
-				print 'Initialize inclusions dict finish...'
+				print ('Initialize inclusions dict finish...')
 				
 				for ic,community_t in enumerate(interval):
 					
@@ -88,12 +88,12 @@ class Tracker():
 						'forming', 'no_event']
 		events = [e['resulted_event'] for e in self.results]
 		for name in events_names:
-			print name, events.count(name)
+			print (name, events.count(name))
 
 if __name__=='__main__':
 	if len(sys.argv) !=	2:
-		print 'Usage: Tracker.py <inputfile.json>'
-		print 'Exiting with code 1'
+		print ('Usage: Tracker.py <inputfile.json>')
+		print ('Exiting with code 1')
 		exit(1)
 	start_time = time.time()
 	graphs = preprocessing.getGraphs(sys.argv[1])
@@ -102,6 +102,6 @@ if __name__=='__main__':
 	with open('ged_results.csv','w')as f:
 		for hypergraph in tracker.hypergraphs:
 			hypergraph.calculateEvents(f)
-	print "--- %s seconds ---" %(time.time() - start_time)
+	print ("--- %s seconds ---" %(time.time() - start_time))
 			
 

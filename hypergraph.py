@@ -53,12 +53,12 @@ class Hypergraph():
 			event = tup[2]['event_type']
 			if SrcNode.graph['cid']==lastNodePast and event == 'forming':
 				self.events_count[event] +=1
-				self.graph.remove_edge(SrcNode,DstNode)
+				#self.graph.remove_edge(SrcNode,DstNode)
 				self.writeEvent('null','null',str(past+1),self.getCid(DstNode),event,outfileD)
 				self.GED_formed.append(DstNode.graph['cid'])
 			elif DstNode.graph['cid'] == lastNodeFuture and event == 'dissolving':
 				self.events_count[event] +=1
-				self.graph.remove_edge(SrcNode,DstNode)
+				#self.graph.remove_edge(SrcNode,DstNode)
 				self.writeEvent(str(past),self.getCid(SrcNode),'null','null',event,outfileD)
 				self.GED_dissolved.append(SrcNode.graph['cid'])
 			elif self.graph.in_degree(DstNode)==1 and self.graph.out_degree(SrcNode)==1:

@@ -33,10 +33,9 @@ class Inclusion():
                           float(g1.number_of_nodes()))
 
     def find_group_quality(self, intersection, g1):
-        intersection_sum = sum([g1.node[node]['centrality'] for node in intersection])
+        intersection_sum = sum([g1._node[node]['centrality'] for node in intersection])
         g1_sum = sum([d['centrality'] for node,d in g1.nodes(data=True)])
-        if (not g1_sum):
-			return 0
+        if (not g1_sum): return 0
         return intersection_sum / g1_sum
 
 
@@ -86,8 +85,8 @@ class CentralityInclusion(Inclusion):
     def find_degree(self, initial_graph):
         #degrees_dict = nx.pagerank(initial_graph, alpha=0.9)
         degrees_dict = nx.degree_centrality(initial_graph)
-        for node, value in degrees_dict.iteritems():
-            initial_graph.node[node]['centrality'] = value
+        for node, value in degrees_dict.items():
+            initial_graph._node[node]['centrality'] = value
         return initial_graph
 
     def find_inclusions(self, g1, g2):
